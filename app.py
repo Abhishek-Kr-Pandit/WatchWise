@@ -4,7 +4,10 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
+import os
 
+port = int(os.environ.get("PORT", 8501))
+st.write(f"Running on port {port}")
 
 
 def fetch_poster(movie_id):
